@@ -19,3 +19,4 @@ The app is a specific feature of the **Foursquare API**. I want to use the *Fun*
 - Suggest places to friends trough PM's  
 - Add new places  
 - Activity feed from friends
+
