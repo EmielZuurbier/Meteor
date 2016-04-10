@@ -8,6 +8,19 @@ See what is available and open, check if your friends are there and check in you
 ### Idea
 The app is a specific feature of the **Foursquare API**. I want to use the *Fun* section of places that are suggested in a user's surrounding. The user will be able to see suggestions on a map and a list. The information about a specific location will be supplied through a detailed view which shows the rating, the people present and reviews about the location.
 
+### Views  
+#### Login  
+The user logs in with his or hers account information.  
+
+#### Suggestions - Map  
+Map view of all the suggested locations in the area
+
+#### Suggestions - List  
+List view of all the suggested locations in the area
+
+#### Detail
+A detailed view of a location with all the given information
+
 ### Features  
 - Get suggetions for places to go in a list
 - Get suggetions for places to go on a map
