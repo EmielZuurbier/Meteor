@@ -14,9 +14,14 @@ The app is a specific feature of the **Foursquare API**. I want to use the *Fun*
 - See who is there  
 - Check in to the places you go to  
 - Rate your locations  
+- Get information about the suggested locations
 
 ### Future features  
+- Route to location  
 - Suggest places to friends trough PM's  
+- Get suggestions from friends  
+- Add photo's  
 - Add new places  
-- Activity feed from friends
+- Edit places  
+- Activity feed from friends  
 
