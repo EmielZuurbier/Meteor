@@ -1,0 +1,21 @@
+<template name="layout">
+	<header class="banner">
+		<h1><span>Rat </span>Race</h1>
+		<button class="mobile-button">
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="nav">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/account">Account</a></li>
+				<li><a href="/map">Map</a></li>
+				<li><a href="/overview">Overview</a></li>
+				<li><a href="/leaderboard">Leaderboard</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		{{> yield}}
+	</main>
+</template>

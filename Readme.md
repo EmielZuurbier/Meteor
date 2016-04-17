@@ -1,27 +1,28 @@
 # Meteor
 First time experiment with Meteor.js.  
   
-## Get Out - concept
-What do you do when do want something cool to do in the morning, afternoon, evening or night and are desperate to find something fun. Use **Get Out** which suggests cool stuff for you in the neighbourhood.  
-See what is available and open, check if your friends are there and check in yourself.  
+## Rat Race - concept
+Battle you and your friends in a race to the death. Create a race, set the markers and race with your friends to the finish. The winners will be ranked according to their accomplishments. There is no order in the markers so you have to find your own fastest way.
 
 ### Idea
-The app is a specific feature of the **Foursquare API**. I want to use the *Fun* section of places that are suggested in a user's surrounding. The user will be able to see suggestions on a map and a list. The information about a specific location will be supplied through a detailed view which shows the rating, the people present and reviews about the location.
+The app is a specific feature of the **Foursquare API**. Users will be able to use Foursquare map locations as beacons which will be used as checkpoints for a race. The beacons are don't have a linear order, so the fastest route is yours to follow.
 
 ### Views  
 #### Login  
 The user logs in with his or hers account information.  
 
-#### Suggestions - Map  
-Map view of all the suggested locations in the area
+#### Create Race - Map  
+Set the locations on a map
 
-#### Suggestions - List  
-List view of all the suggested locations in the area
+#### Create Race - Overview  
+See who is competing and is leading
 
-#### Detail
-A detailed view of a location with all the given information
+#### Leaderboard
+A leaderboard with all the fastest times en the ranking
+
 
 ### Features  
+- See who checked in at your favorite locations
 - Get suggetions for places to go in a list
 - Get suggetions for places to go on a map
 - See who is there  

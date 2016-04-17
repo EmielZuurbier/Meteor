@@ -1,0 +1,53 @@
+<template name="account">
+	<section>
+		<header>
+			<h2>User</h2>
+		</header>
+		{{#if currentUser}}
+			{{> loggedIn}}
+		{{else}}
+			{{> login}}
+			{{> register}}
+		{{/if}}
+	</section>
+</template>
+
+<template name="loggedIn">
+	<p>You're logged in.</p>
+	{{userId}}
+	<button class="logout button wide done">Logout</button>
+</template>
+
+<template name="login">
+	<form>
+		<fieldset>
+			<legend>Login</legend>
+			<input type="text" name="loginEmail" required>
+			<label>
+				Email
+			</label>
+			<input type="password" name="loginPassword">
+			<label>
+				Password
+			</label>
+			<input class="button done wide" type="submit" value="Login">
+		</fieldset>
+	</form>
+</template>
+
+<template name="register">
+	<form>
+		<fieldset>
+			<legend>Register</legend>
+			<input type="text" name="registerEmail" required>
+			<label>
+				Email
+			</label>
+			<input type="password" name="registerPassword">
+			<label>
+				Password
+			</label>
+			<input class="button more wide" type="submit" value="Register">
+		</fieldset>
+	</form>
+</template>

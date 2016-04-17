@@ -1,0 +1,18 @@
+<template name="leaderboard">
+	<section>
+		<header>
+			<h2>Leaderboard</h2>
+		</header>
+		<table>
+			<tbody>
+				{{#each Leaderboards}}
+				<tr>
+					<td>{{rank}}</td>
+					<td>{{name}}</td>
+					<td>{{time}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</section>
+</template>

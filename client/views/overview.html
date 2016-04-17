@@ -1,0 +1,17 @@
+<template name="overview">
+	<section>
+		<header>
+			<h2>Races</h2>
+		</header>
+		{{#each Races}}
+		<a href="/race">
+			<article>
+				<header>
+					{{title}}
+				</header>
+
+			</article>
+		</a>
+		{{/each}}
+	</section>
+</template>
