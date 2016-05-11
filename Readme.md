@@ -39,4 +39,4 @@ A leaderboard with all the fastest times en the ranking
 - Show results
 
 ## Check it out
-ratrace.emielzuurbier.com
+[ratrace.emielzuurbier.com](http://ratrace.emielzuurbier.com)
