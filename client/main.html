@@ -1,8 +1,19 @@
 <head>
-	<title>Rat Race</title>
+  	<title>Rat Race</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900|Bree+Serif' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-<!--  	{{> layout}}-->
+<!--	{{> layout}}-->
 </body>
+
+<template name="layout">
+	<div id="loader"></div>
+	<div id="map"></div>
+<!--	<main>-->
+		{{> yield}}
+<!--	</main>-->
+</template>

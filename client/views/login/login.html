@@ -1,0 +1,84 @@
+<template name="login">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h2>Login</h2>
+						<p>Come in and play</p>
+						{{#if currentUser}}
+						<a href="/" class="button control left">
+							<i class="fa fa-arrow-left"></i>
+						</a>
+						{{/if}}
+					</header>
+				</div>
+			</div>
+			{{#if currentUser}}
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Welcome <span>{{User}}</span></h3>
+					<p>This here is your account</p>
+					<button class="logout secondairy">Log out</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p><strong>Thank you</strong> for trying out this app. If you have any suggestions or feedback, please contact my personal e-mail.</p>
+					<a href="mailto:emielzuurbier@outlook.com?SUBJECT=Rat Race app feedback & thoughts">emielzuurbier@outlook.com</a>
+				</div>
+			</div>
+			{{else}}
+			<div class="row">
+				<div class="col-md-12">
+					<form role="form">
+						<fieldset class="active">
+							<div id="form-messages"></div>
+							<input type="text" required name="username">
+							<label for="loginUsername">Username</label>
+							<input type="password" required name="password">
+							<label for="password">Password</label>
+							<input type="submit" name="submit" value="login">
+							<a class="button secondairy" href="/register">Register</a>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</section>
+</template>
+
+
+<template name="register">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h2>Register</h2>
+						<p>Create an account</p>
+						<a href="/login" class="button control left">
+							<i class="fa fa-arrow-left"></i>
+						</a>
+					</header>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form role="form">
+						<fieldset>
+							<input type="text" required name="username">
+							<label for="username">Username</label>
+							<input type="email" required name="email">
+							<label for="email">E-mail</label>
+							<input type="password" required name="password">
+							<label for="password">Password</label>
+							<input type="submit" name="submit" value="register">
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>

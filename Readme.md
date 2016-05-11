@@ -9,33 +9,34 @@ The app is a specific feature of the **Foursquare API**. Users will be able to u
 
 ### Views  
 #### Login  
-The user logs in with his or hers account information.  
+The user logs in with his or hers account information.
 
-#### Create Race - Map  
+#### Home
+From here you can create a new race or join a created one
+
+#### Create  
 Set the locations on a map
 
-#### Create Race - Overview  
-See who is competing and is leading
+#### Race 
+Join a race and compete with your opponents
 
 #### Leaderboard
 A leaderboard with all the fastest times en the ranking
 
 
 ### Features  
-- See who checked in at your favorite locations
-- Get suggetions for places to go in a list
-- Get suggetions for places to go on a map
-- See who is there  
-- Check in to the places you go to  
-- Rate your locations  
-- Get information about the suggested locations
+- Create new races
+- Delete race
+- Join and leave a race
+- Select markers on a map for a race
+- Name your race
+- Login and create an account
+
 
 ### Future features  
-- Route to location  
-- Suggest places to friends trough PM's  
-- Get suggestions from friends  
-- Add photo's  
-- Add new places  
-- Edit places  
-- Activity feed from friends  
+- Finish race
+- Get leaderboard
+- Show results
 
+## Check it out
+ratrace.emielzuurbier.com

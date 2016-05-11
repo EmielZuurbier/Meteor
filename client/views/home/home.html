@@ -1,0 +1,66 @@
+<template name="home">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h2>Rat Race</h2>
+						<p>Create or join a race</p>
+						<a href="/login" class="right button control">
+							<i class="fa fa-user"></i>
+						</a>
+					</header>
+				</div>
+			</div>
+			{{#if currentUser}}
+			<div class="row">
+				<div class="col-md-12">
+					<a href="/create" class="button primary">Create new race</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="tall">
+						{{#if RaceNumber}}
+						<li class="title">
+							<a href="#">
+								<h3>Current races</h3>
+								<p>Select a race to join</p>
+							</a>
+						</li>
+						{{/if}}
+						{{#each Races}}
+							<li>
+								<a href="/race/{{_id}}" class="race">
+									<h4>{{name}}</h4>
+									<table>
+										<tbody>
+											<tr>
+												<td><strong>Joined players:</strong> {{Players}}</td>
+												<td><strong>Locations:</strong> {{Locations}}</td>
+											</tr>
+										</tbody>
+									</table>
+								</a>
+								{{#if Remove}}
+								<div>
+									<button class="control remove">X</button>
+								</div>
+								{{/if}}
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+			{{else}}
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Please login</h3>
+					<p>It seems that you are not logged in at the moment. Please login or create an account by pressing the link below</p>
+					<a href="/login" class="button primary">Login</a>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</section>
+</template>

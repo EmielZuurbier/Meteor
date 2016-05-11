@@ -1,5 +1,5 @@
 {
-  "name": "Xusic",
+  "name": "ratrace2",
   "private": true,
   "scripts": {
     "start": "meteor run"

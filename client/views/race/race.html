@@ -1,0 +1,62 @@
+<template name="race">
+	<section class="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h2>{{name}}</h2>
+						<p>Go Race!</p>
+						<a href="/" class="button control left">
+							<i class="fa fa-arrow-left"></i>
+						</a>
+					</header>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bottom-menu">
+		<div class="container">
+			<div class="row">
+				<div class="controls">
+					<button id="center" class="control"><i class="fa fa-location-arrow"></i></button>
+					<button id="leave" class="control"><i class="fa fa-sign-out"></i></button>
+					<button id="menu" class="control"><i class="fa fa-bars"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="tall">
+						<li class="title">
+							<a href="#">
+								<h3><span>Locations on map</span> {{locations.length}}</h3>
+								<p>Click on a location to move to its location</p>
+							</a>
+						</li>
+						{{#each locations}}
+						<li>
+							<a href="#" class="race">
+								<h3>{{title}}</h3>
+								<p>{{address}}</p>
+							</a>
+						</li>
+						{{/each}}
+						<li class="title">
+							<a href="#">
+								<h3><span>Players in race </span> {{players.length}}</h3>
+								<p>Click on a player to move to its location</p>
+							</a>
+						</li>
+						{{#each players}}
+						<li>
+							<a href="#" class="race">
+								<h3>{{name}}</h3>
+								<p>{{lat}} - {{lng}}</p>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>

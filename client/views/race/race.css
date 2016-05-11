@@ -1,0 +1,8 @@
+.leaflet-popup-content h3 {
+	color: #1a1a1a;
+	margin: 0;
+}
+
+.leaflet-popup-content p {
+	color: #777777;
+}

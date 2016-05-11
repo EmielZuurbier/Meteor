@@ -1,0 +1,69 @@
+<template name="create">
+	<section class="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h2>Create</h2>
+						<p>a new race</p>
+						<a href="/" class="button control left">
+							<i class="fa fa-arrow-left"></i>
+						</a>
+					</header>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form>
+						<fieldset>
+							<input type="text" name="title" id="title" value="" required>
+							<label for="title">Name your race</label>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bottom-menu">
+		<div class="container">
+			<div class="row">
+				<div class="controls">
+					<button class="create control">
+						<i class="fa fa-check"></i>
+					</button>
+					<button class="refresh control">
+						<i class="fa fa-refresh"></i>
+					</button>
+					<button id="menu" class="control">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+<!--					<h3><strong>{{Length}}</strong> selected</h3>-->
+					<ul>
+						{{#each Locations}}
+						<li>
+							<a href="#">
+								<h4>{{title}}</h4>
+								<p>{{address}} - {{city}}</p>
+							</a>
+							<div>
+								<button class="control delete">
+									<i class="fa fa-times"></i>
+								</button>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button class="primary" id="create">Finished</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
