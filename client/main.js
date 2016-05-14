@@ -3,17 +3,20 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
+// Store coordinates in object
+var coords = {}
+
 Template.layout.onCreated(function () {
+	
+	// Subcribe to Races
 	Meteor.subscribe('races');
+	
 });
 
 Template.layout.onRendered(function () {
 	
 	// Start loader
 	$('#loader').addClass('active');
-	
-	// Store coordinates in object
-	coords = {}
 	
 	// Get current location
 	navigator.geolocation.getCurrentPosition(function (data) { 
@@ -47,6 +50,7 @@ Template.layout.onRendered(function () {
 			className: 'location-marker'
 		});
 		
+		// Create captured location marker
 		markerIconCaptured = L.divIcon({
 			iconSize: [20, 20],
 			iconAnchor: [10, 10],
@@ -88,10 +92,4 @@ Template.layout.onRendered(function () {
 		$('#loader').removeClass('active');
 	});
 	
-});
-
-Template.layout.events({
-	'click .add-location': function (e, template) {
-		console.log(this, e);
-	}
 });

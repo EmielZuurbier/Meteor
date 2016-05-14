@@ -82,20 +82,6 @@ Template.race.onRendered(function () {
 			
 		});
 		
-		players.forEach(function (player) {
-			// Add icon of user
-			var marker = new L.marker(L.latLng(player.lat, player.lng), {
-				clickable: true,
-				id: player.id,
-				name: player.name,
-				lat: player.lat,
-				lng: player.lng,
-				icon: userIcon
-			}).bindPopup('<h3>' + player.name + '</h3>');
-			
-			playerMarkers.addLayer(marker);
-		})
-		
 	}
 	
 	// Add layer to map
@@ -147,7 +133,7 @@ Template.race.onRendered(function () {
 					
 					// Check how far the opponents are from locations
 					locations.forEach(function (location) {
-						console.log(curLoc.distanceTo(L.latLng(location.lat, location.lng)));
+//						console.log(curLoc.distanceTo(L.latLng(location.lat, location.lng)));
 					});
 
 					// Add markers to layer
@@ -205,9 +191,6 @@ Template.race.onDestroyed(function () {
 	var parts = location.href.split('/');
 	var id = parts.pop();
 	
-	// Remove player from race
-//	Meteor.call('removePlayer', id);
-	
 	// Remove layers
 	playerMarkers.clearLayers();
 	raceMarkers.clearLayers();
@@ -218,14 +201,6 @@ Template.race.onDestroyed(function () {
 	
 });
 
-//Template.race.helpers({
-//	
-//	Locations () {
-//		var currentRace = Races.findOne({_id: pageId()});
-//		return currentRace.locations;
-//	}
-//	
-//});
 
 Template.race.events({
 	
@@ -241,7 +216,7 @@ Template.race.events({
 		// Get current hash id
 		var parts = location.href.split('/');
 		var id = parts.pop();
-
+		
 		// Remove player from race
 		Meteor.call('removePlayer', id);
 		
@@ -250,10 +225,11 @@ Template.race.events({
 		
 	},
 	
-	'click #menu': function (e, template) {
+	'click #menu': function (e, template) {	
 		
 		// Open menu
 		template.$('.bottom-menu').toggleClass('open');
+		template.$('#menu').toggleClass('open');
 		
 	},
 	
@@ -262,6 +238,7 @@ Template.race.events({
 		// Navigate to location marker
 		map.setView([this.lat, this.lng], 15);
 		e.preventDefault();
+		
 	}
 })
 
