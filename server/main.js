@@ -11,6 +11,12 @@ Meteor.startup(() => {
   // code to run on server at startup
 });
 
+// Publish races
 Meteor.publish('races', function () {
 	return Races.find();
+});
+
+// Publish leaderboard
+Meteor.publish('leaderboard', function () {
+	return Leaderboard.find();
 });
